@@ -1,0 +1,8 @@
+{
+  "name": "Kisan.hal - AI Agriculture Assistant",
+  "description": "An AI-powered web application providing farmers with personalized crop advice, market prices, leaf disease detection, and location-based insights to revolutionize their agricultural practices.",
+  "requestFramePermissions": [
+    "geolocation",
+    "microphone"
+  ]
+}
