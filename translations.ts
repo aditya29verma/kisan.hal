@@ -1,0 +1,52 @@
+
+export const translations = {
+  en: {
+    app: {
+      title: "Kisan.hal",
+      tagline: "yaha milega hal",
+      desc: "Revolutionizing agriculture with AI-powered insights. Get personalized recommendations for your crops based on soil type, weather conditions, location, and growth stages.",
+      checkOut: "Check it out !!",
+      getStarted: "Get Started with our AI Chatbot",
+    },
+    features: {
+      title: "Core Features",
+      subtitle: "Comprehensive agricultural intelligence powered by modern technology.",
+      soil: { title: "Soil Analysis", desc: "Get recommendations based on your specific soil type and conditions." },
+      weather: { title: "Weather Integration", desc: "Real-time weather data to optimize your farming decisions." },
+      crop: { title: "Crop Optimization", desc: "Maximize yields with stage-specific agricultural advice." },
+      disease: { title: "Disease Prevention", desc: "Early detection and prevention strategies for common crop diseases." },
+      leaf: { title: "Leaf Disease Detection", desc: "Upload a photo of your crop's leaf to get an AI-powered diagnosis." },
+      market: { title: "Market Pricing", desc: "Real-time accurate market prices on our hand." },
+    },
+    forms: {
+      agri: { title: "Agricultural Information", subtitle: "Complete all fields to generate your customized crop advisory report." },
+      market: { title: "Market Price Tracking", subtitle: "Complete all fields for price of crops and pesticides." },
+      leaf: { title: "Leaf Disease Detection", subtitle: "Capture or upload a clear photo of your crop's leaf to get an AI-powered diagnosis." },
+      prevention: { title: "Disease Prevention", subtitle: "Get a proactive plan to protect your crops from common diseases." },
+      location: { title: "Location Information", subtitle: "Get customized advisory report based on your location." },
+      optimize: { title: "Crop Optimization", subtitle: "Get an advanced plan to enhance your crop's performance." },
+    },
+    labels: {
+      soilType: "Soil Type",
+      cropType: "Crop Type",
+      seedType: "Seed Type",
+      seedName: "Name of Seed",
+      growthStage: "Growth Stage",
+      state: "Your State",
+      district: "Your District",
+      city: "Your City",
+      goal: "Primary Goal",
+      yield: "Current Yield Status",
+      irrigation: "Irrigation Method",
+      fertilizer: "Fertilizer Program",
+      disease: "Common Disease",
+    },
+    placeholders: {
+      selectSoil: "Select your soil type",
+      selectCrop: "Select your crop",
+      selectSeedType: "Select your seed type",
+      selectSeed: "Select your seed",
+      selectGrowth: "Select growth stage",
+      selectState: "Select your State",
+      selectDistrict: "Select District",
+      

@@ -11,7 +11,7 @@ const LeafDiseaseForm: React.FC = () => {
     const [timer, setTimer] = useState(120);
 
     useEffect(() => {
-        let interval: NodeJS.Timeout;
+        let interval: ReturnType<typeof setInterval>;
         if (isLoading) {
             setTimer(120);
             interval = setInterval(() => {
@@ -70,14 +70,19 @@ const LeafDiseaseForm: React.FC = () => {
         <FormSection
             id="disease-form"
             title="Leaf Disease Detection"
-            subtitle="Upload a clear photo of your crop's leaf to get an AI-powered diagnosis."
+            subtitle="Capture or upload a clear photo of your crop's leaf to get an AI-powered diagnosis."
         >
             <form onSubmit={handleSubmit} className="w-full flex flex-col items-center">
                  <div className="relative w-full max-w-lg">
-                    <input type="file" id="leafImage" accept="image/*" className="absolute w-0 h-0 opacity-0" onChange={handleFileChange} required disabled={isLoading} />
+                    <input type="file" id="leafImage" accept="image/*" capture="environment" className="absolute w-0 h-0 opacity-0" onChange={handleFileChange} required disabled={isLoading} />
                     <label htmlFor="leafImage" className={`flex flex-col items-center p-10 bg-background border-4 border-dashed border-primary rounded-xl cursor-pointer transition-all duration-300 ${isLoading ? 'cursor-not-allowed bg-gray-200' : 'hover:border-secondary hover:bg-green-50'}`}>
-                        <div className="text-6xl mb-4">🍃</div>
-                        <div className="text-xl font-bold text-primary mb-2">Click to Upload Leaf Image</div>
+                        <div className="mb-4 text-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-20 h-20">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z" />
+                            </svg>
+                        </div>
+                        <div className="text-xl font-bold text-primary mb-2">Click to Capture/Upload Leaf Image</div>
                         <div className="text-sm text-gray-500">or drag and drop here</div>
                     </label>
                 </div>

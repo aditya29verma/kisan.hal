@@ -2,10 +2,10 @@
 import React from 'react';
 
 const FeatureCard: React.FC<{ icon: string; title: string; description: string }> = ({ icon, title, description }) => (
-  <div className="bg-white p-8 rounded-xl shadow-lg text-center transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-2xl">
+  <div className="bg-white p-8 rounded-xl shadow-lg text-center transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-2xl h-full cursor-default">
     <div className="text-5xl mb-4">{icon}</div>
     <h3 className="text-xl font-bold mb-2 text-primary">{title}</h3>
-    <p>{description}</p>
+    <p className="text-text-primary">{description}</p>
   </div>
 );
 
@@ -15,7 +15,7 @@ const Features: React.FC = () => {
     { icon: '☀️', title: 'Weather Integration', description: 'Real-time weather data to optimize your farming decisions.' },
     { icon: '🌾', title: 'Crop Optimization', description: 'Maximize yields with stage-specific agricultural advice.' },
     { icon: '🦠', title: 'Disease Prevention', description: 'Early detection and prevention strategies for common crop diseases.' },
-    { icon: '🔉', title: 'Voice Advisory', description: 'Personal Crop Advisor which suits your soil and crop.' },
+    { icon: '📸', title: 'Leaf Disease Detection', description: 'Upload a photo of your crop\'s leaf to get an AI-powered diagnosis.' },
     { icon: '📈', title: 'Market Pricing', description: 'Real-time accurate market prices on our hand.' },
   ];
 
